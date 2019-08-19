@@ -1,0 +1,5 @@
+test:
+  script:
+    - cd "tests"
+    - matlab -batch runtests
+ 

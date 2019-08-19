@@ -1,0 +1,25 @@
+classdef testSquareRoot < matlab.unittest.TestCase
+    
+    properties (TestParameter)
+        val = {4,16};
+        res = {2,4};
+    end
+    
+    methods (TestClassSetup)
+        function addTestContentToPath(testCase)
+            addpath('C:\MAB2019\r2019_imab_demo\source');
+       
+        end
+    end       
+    
+    
+    methods (Test,ParameterCombination='sequential')
+        function testFoo(testCase,val,res)
+            testCase.verifyEqual(squareRoot(val),res);
+        end
+        
+    end
+  
+    
+end
+
