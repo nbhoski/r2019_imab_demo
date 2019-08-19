@@ -7,7 +7,7 @@ classdef testSquareRoot_parameterized < matlab.unittest.TestCase
     
     methods (TestClassSetup)
         function addTestContentToPath(testCase)
-            addpath('C:\MAB2019\r2019_imab_demo\source');
+            addpath('C:\MAB2019\git\r2019_imab_demo\source');
         end
     end       
     
