@@ -5,11 +5,11 @@ classdef testSquareRoot_parameterized < matlab.unittest.TestCase
         expected_outputs = {2, 4, 9 , 11, 7};
     end
     
-    methods (TestClassSetup)
-        function addTestContentToPath(testCase)
-            addpath(fullfile(getenv('WORKSPACE'),'source'));
-        end
-    end       
+    %methods (TestClassSetup)
+    %    function addTestContentToPath(testCase)
+    %        addpath(fullfile(getenv('WORKSPACE'),'source'));
+    %    end
+    %end       
     
     
     methods (Test,ParameterCombination='sequential')
