@@ -18,13 +18,13 @@ end
 runner = TestRunner.withTextOutput('LoggingLevel', 1, 'OutputDetail', 4);
 runner.addPlugin(FailOnWarningsPlugin());
 runner.addPlugin(TestReportPlugin.producingPDF('artifacts/result.pdf'));
-%runner.addPlugin(TAPPlugin.producingVersion13(ToStandardOutput));
+runner.addPlugin(TAPPlugin.producingVersion13(ToStandardOutput));
 runner.addPlugin(TAPPlugin.producingVersion13(ToFile('artifacts/result.tap')));
 
  
 results = runner.run(suite);
 display(results);
-display(fileread('artifacts/result.tap'));
+%display(fileread('artifacts/result.tap'));
 
 assertSuccess(results);
 
