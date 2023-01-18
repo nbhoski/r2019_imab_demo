@@ -14,6 +14,7 @@ classdef testSquareRoot_parameterized < matlab.unittest.TestCase
     
     methods (Test,ParameterCombination='sequential')
         function test(testCase,inputs,expected_outputs)
+            pasue(20);
             testCase.verifyEqual(squareRoot(inputs),expected_outputs);
         end
         
