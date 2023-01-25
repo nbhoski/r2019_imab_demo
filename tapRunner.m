@@ -20,6 +20,7 @@ runner.addPlugin(FailOnWarningsPlugin());
 runner.addPlugin(TestReportPlugin.producingPDF('artifacts/result.pdf'));
 runner.addPlugin(TAPPlugin.producingVersion13(ToStandardOutput));
 runner.addPlugin(TAPPlugin.producingVersion13(ToFile('artifacts/result.tap')));
+runner.addPlugin(CodeCoveragePlugin.forFile("QuadraticPolynomial.m"))
 
  
 results = runner.run(suite);
