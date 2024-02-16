@@ -1,0 +1,16 @@
+version: '2.1'
+orbs:
+  matlab: mathworks/matlab@1
+jobs:
+  build:
+    machine:
+      image: ubuntu-2004:current
+    steps:
+      - checkout
+      - matlab/install
+      - matlab/run-command:
+          command: pwd
+workflows:
+  build:
+    jobs:
+      - build
