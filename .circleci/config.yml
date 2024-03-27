@@ -1,6 +1,7 @@
 version: '2.1'
 orbs:
   matlab: mathworks/matlab@1
+  banners: eddiewebb/banners@0.1.7
 jobs:
   build:
     machine:
@@ -10,7 +11,15 @@ jobs:
       - matlab/install
       - matlab/run-command:
           command: pwd
+  example-job:
+    docker:
+      # replace with your preferred image
+      - image: cimg/base:stable
+    steps:
+      - banners/print:
+          message: HELLO PRINT ME 
 workflows:
   build:
     jobs:
       - build
+      - example-job 
