@@ -45,7 +45,7 @@ jobs:
           cache: false
 
       - name: Run MATLAB Build
-        uses: nbhoski/run-build@891477f47786192bff6384756bc42ae0b3852d40
+        uses: nbhoski/run-build
 
       - name: HTML Preview
         uses: pavi2410/html-preview-action@v2
