@@ -14,6 +14,7 @@ plan("test").Actions = @testTask;
 plan("test").Description = "tests Dscription";
 plan("test").Dependencies = ["check","show"];
 plan("show") = Task;
+plan("show").Description = "Shows the details"
 plan("show").Actions = @showTask;
 
 %plan("dsplay")
