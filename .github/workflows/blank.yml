@@ -62,6 +62,12 @@ jobs:
            paths:  "test-results/results.xml"
            # File to write with rendered output
 
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always() # This ensures that test results are published even if the test step fails
+        with:
+         files: test-results/*.xml
+
       - name: Generate Job Summary
         run: |
           echo '### Job 1 Summary' >> $GITHUB_STEP_SUMMARY
