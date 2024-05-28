@@ -54,15 +54,25 @@ jobs:
         with:
          paths: "test-results/results.xml"
         if: always()
+
+      - name: Junit Test Dashboard
+        uses: janisz/action@v2
+        with:
+           # Path(s) to test output file(s) to analyze
+           paths:  "test-results/results.xml"
+           # File to write with rendered output
+       
+  
+
           
 
-      - name: Run MATLAB Build
-        uses: matlab-actions/run-build@v2.2.0
+      #- name: Run MATLAB Build
+       # uses: matlab-actions/run-build@v2.2.0
 
-      - name: HTML Preview
-        uses: pavi2410/html-preview-action@v2
-        with:
-          html_file: https://htmlpreview.github.io/?https://github.com/nbhoski/r2019_imab_demo/blob/master/tables.html
+      #- name: HTML Preview
+       # uses: pavi2410/html-preview-action@v2
+        #with:
+         # html_file: https://htmlpreview.github.io/?https://github.com/nbhoski/r2019_imab_demo/blob/master/tables.html
           
           
           
