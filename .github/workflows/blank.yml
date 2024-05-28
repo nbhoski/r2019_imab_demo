@@ -66,7 +66,19 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v1
         if: always() # This ensures that test results are published even if the test step fails
         with:
-         files: test-results/*.xml
+         files: test-results/results.xml
+
+      - name: Run tests
+        uses: matlab-actions/run-tests@v2
+        with:
+          source-folder: source
+          test-results-junit: test-results/results2.xml
+
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always() # This ensures that test results are published even if the test step fails
+        with:
+         files: test-results/results2.xml
 
       - name: Generate Job Summary
         run: |
