@@ -43,6 +43,18 @@ jobs:
           release: latest
           products: MATLAB
           cache: false
+      - name: Run tests
+        uses: matlab-actions/run-tests@v2
+        with:
+          test-results-junit: test-results/results.xml
+          code-coverage-cobertura: code-coverage/coverage.xml
+
+      - name: Junit Test Summary
+        uses: test-summary/action@v2
+        with:
+         paths: "test-results/results.xml"
+        if: always()
+          
 
       - name: Run MATLAB Build
         uses: matlab-actions/run-build@v2.2.0
