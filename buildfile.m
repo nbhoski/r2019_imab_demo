@@ -28,7 +28,7 @@ disp("Hello Check");
 end
 function showTask(~)
  % Identify code issues
-di("Hello Show");
+disp("Hello Show");
 end
 
 function testTask(~)
