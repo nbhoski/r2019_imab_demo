@@ -20,7 +20,7 @@ plan("show").Actions = @showTask;
 %plan("dsplay")
 
 plan("clean") = CleanTask();
-plan.DefaultTasks = ["test"];
+plan.DefaultTasks = ["check"];
 
 function checkTask(~)
  % Identify code issues
