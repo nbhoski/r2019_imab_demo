@@ -48,7 +48,7 @@ jobs:
       - name: Run MATLAB Build
         uses: matlab-actions/run-build@v2.4.0
         with:
-           tasks: bat
+           tasks: check
         
 
       #- name: HTML Preview
