@@ -46,6 +46,10 @@ jobs:
   
 
       - name: Run MATLAB Build
+        run: |
+          echo "change to docs"
+          cd docs
+      - name: Run MATLAB Build
         uses: matlab-actions/run-build@v2.4.0
         with:
            tasks: check
